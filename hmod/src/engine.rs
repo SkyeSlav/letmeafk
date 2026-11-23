@@ -31,7 +31,7 @@ use std::sync::{LazyLock, Mutex, MutexGuard};
 
 pub const ID: &str = "letmeafk";
 pub const NAME: &str = "LetMeAFK";
-pub const VERSION: &str = "1.0.0";
+pub const VERSION: &str = "1.1.0";
 pub const DESCRIPTION: &str = "Keeps you from going AFK: timed jumps, sneak, swing, punch, use, a WASD walk cycle, camera moves, spin, auto-eat, hotbar shuffling, offhand swaps, inventory opens, chat messages, auto-commands, auto-disconnect, disconnect on damage and auto-logout. Many servers forbid AFK automation — check the rules first.";
 
 /// The WASD walk cycle: this many ticks walking one direction, then

@@ -1,6 +1,6 @@
 id = "letmeafk"
 name = "LetMeAFK"
-version = "1.0.0"
+version = "1.1.0"
 description = "Keeps you from going AFK: timed jumps, sneak, swing, punch, use, a WASD walk cycle, camera moves, spin, auto-eat, hotbar shuffling, offhand swaps, inventory opens, chat messages, auto-commands, auto-disconnect, disconnect on damage and auto-logout. Many servers forbid AFK automation — check the rules first."
 authors = ["SkyeSlav"]
 license = "MIT"
