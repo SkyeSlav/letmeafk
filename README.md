@@ -1,6 +1,6 @@
 # LetMeAFK
 
-<p align="center"><img src="logo.png" alt="LetMeAFK logo" width="180"></p>
+<p align="center"><img src="logo.png" alt="LetMeAFK logo: a crescent moon and Zz on a dark background" width="180"></p>
 
 <p align="center">
   <a href="https://github.com/SkyeSlav/letmeafk/releases/latest"><img src="https://img.shields.io/github/v/release/SkyeSlav/letmeafk" alt="Latest release"></a>
