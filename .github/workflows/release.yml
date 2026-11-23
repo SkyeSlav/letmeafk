@@ -42,5 +42,5 @@ jobs:
           body: |
             ${{ env.VERSION }} of LetMeAFK: keeps you from going AFK — timed jumps, sneak, swing, punch, use, a WASD walk cycle, camera moves, spin, auto-eat, hotbar shuffling, offhand swaps, inventory opens, chat messages, auto-commands, auto-disconnect, disconnect on damage and auto-logout. Toggle with /lmafk or F8.
 
-            Many servers forbid AFK avoidance or automation, or may flag it with an anticheat, so using this mod can get you banned. Check the server's rules first. It never reconnects on its own.
+            AFK automation is against the rules on many servers. This mod moves, clicks, chats and sends commands for you — exactly the kind of input anticheats watch for — so using it can get you flagged, kicked, or banned, temporarily or permanently, even on a server where it seems to work fine. It does not hide itself from detection, and there is no way to use it safely on a server that forbids it. Check each server's rules before you turn it on, and use it at your own risk. It never reconnects on its own.
           files: hmod/target/horizon-mod/*.hmod

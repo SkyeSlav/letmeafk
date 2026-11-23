@@ -5,7 +5,7 @@ name = "LetMeAFK"
 summary = "Keeps you from going AFK: timed jumps, sneak, swing, punch, use, a WASD walk cycle, camera moves, spin, auto-eat and more."
 description = """LetMeAFK automates AFK-avoidance input: it moves, jumps, sneaks, swings, punches and uses the held item on timers, walks a WASD cycle, turns the camera, swaps the hotbar and offhand, opens the inventory, eats when hungry, chats on a schedule or sends a small command instead, and logs out after a set time. Toggle it with /lmafk or F8.
 
-Many servers forbid AFK avoidance or automation, or may flag it with an anticheat, so using this mod can get you banned. Check the server's rules first.
+AFK automation is against the rules on many servers. This mod moves, clicks, chats and sends commands for you — exactly the kind of input anticheats watch for — so using it can get you flagged, kicked, or banned, temporarily or permanently, even on a server where it seems to work fine. It does not hide itself from detection, and there is no way to use it safely on a server that forbids it. Check each server's rules before you turn it on, and use it at your own risk.
 
 It never reconnects on its own: if you get disconnected, you rejoin by hand. It also disconnects you itself when another player comes within your set radius, or the moment you take damage, and warns in chat before an automatic logout."""
 authors = ["SkyeSlav"]

@@ -1,13 +1,16 @@
 # LetMeAFK
 
-![LetMeAFK logo](logo.png)
+<p align="center"><img src="logo.png" alt="LetMeAFK logo" width="180"></p>
 
-[![Starling](https://img.shields.io/badge/Starling-0.9.0-blue)](https://github.com/Starling-Android/Starling)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+<p align="center">
+  <a href="https://github.com/SkyeSlav/letmeafk/releases/latest"><img src="https://img.shields.io/github/v/release/SkyeSlav/letmeafk" alt="Latest release"></a>
+  <a href="https://github.com/SkyeSlav/letmeafk/actions/workflows/release.yml"><img src="https://github.com/SkyeSlav/letmeafk/actions/workflows/release.yml/badge.svg" alt="Release build status"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/SkyeSlav/letmeafk" alt="License: MIT"></a>
+</p>
 
 Keeps you from going AFK. Toggle it with `/lmafk` or **F8** and it moves, jumps, sneaks, swings, punches and uses the held item on timers, walks a WASD cycle, turns the camera, swaps the hotbar and offhand, opens the inventory, eats when hungry, chats on a schedule or sends a small command instead, and logs out after a set time.
 
-> Many servers forbid AFK avoidance or automation, or may flag it with an anticheat, so using this mod can get you banned. Check the server's rules first.
+> AFK automation is against the rules on many servers. This mod moves, clicks, chats and sends commands for you — exactly the kind of input anticheats watch for — so using it can get you flagged, kicked, or banned, temporarily or permanently, even on a server where it seems to work fine. It does not hide itself from detection, and there is no way to use it safely on a server that forbids it. Check each server's rules before you turn it on, and use it at your own risk.
 
 ## Install
 
