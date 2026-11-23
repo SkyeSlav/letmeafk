@@ -1,0 +1,12 @@
+# Supplies name, summary, description, authors and license for the
+# registry entry (other keys are refused). Lives at the repo root in the
+# newest release tag.
+name = "LetMeAFK"
+summary = "Keeps you from going AFK: timed jumps, sneak, swing, punch, use, a WASD walk cycle, camera moves, spin, auto-eat and more."
+description = """LetMeAFK automates AFK-avoidance input: it moves, jumps, sneaks, swings, punches and uses the held item on timers, walks a WASD cycle, turns the camera, swaps the hotbar and offhand, opens the inventory, eats when hungry, chats on a schedule or sends a small command instead, and logs out after a set time. Toggle it with /lmafk or F8.
+
+Many servers forbid AFK avoidance or automation, or may flag it with an anticheat, so using this mod can get you banned. Check the server's rules first.
+
+It never reconnects on its own: if you get disconnected, you rejoin by hand. It also disconnects you itself when another player comes within your set radius, or the moment you take damage, and warns in chat before an automatic logout."""
+authors = ["SkyeSlav"]
+license = "MIT"

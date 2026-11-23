@@ -1,0 +1,46 @@
+name: Release
+# Builds the release file from source and attaches it to the release
+# for the tag:
+# - the .hmod (Horizon launcher / registry) is built with
+#   cargo-horizon-mod against the SDK the manifest pins.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to attach the build to"
+        required: true
+        default: "v1.0.0"
+  push:
+    tags: ["v*"]
+
+jobs:
+  build-hmod:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.99.1"
+      # Pinned to the tool revision this release was built and checked
+      # with, so a later tool change cannot silently change the package.
+      - run: cargo install --locked --git https://github.com/horizon-rust/horizon --rev 5a5aca6b21c7d8af9f7890a43a835cc06e4c21bf cargo-horizon-mod
+      # The build fetches the pinned SDK into hmod/.horizon/sdk/ itself.
+      - run: cd hmod && cargo horizon-mod build
+      - run: cd hmod && cargo horizon-mod check target/horizon-mod/letmeafk.hmod
+      # The tool names its output after the mod id; the release names it
+      # with the version.
+      - run: |
+          tag="${{ inputs.tag || github.ref_name }}"
+          echo "VERSION=${tag#v}" >> "$GITHUB_ENV"
+          mv hmod/target/horizon-mod/letmeafk.hmod "hmod/target/horizon-mod/letmeafk-${tag#v}.hmod"
+      - run: cd hmod && cargo test -- --test-threads=1
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag || github.ref_name }}
+          body: |
+            ${{ env.VERSION }} of LetMeAFK: keeps you from going AFK — timed jumps, sneak, swing, punch, use, a WASD walk cycle, camera moves, spin, auto-eat, hotbar shuffling, offhand swaps, inventory opens, chat messages, auto-commands, auto-disconnect, disconnect on damage and auto-logout. Toggle with /lmafk or F8.
+
+            Many servers forbid AFK avoidance or automation, or may flag it with an anticheat, so using this mod can get you banned. Check the server's rules first. It never reconnects on its own.
+          files: hmod/target/horizon-mod/*.hmod

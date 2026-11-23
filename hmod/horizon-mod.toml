@@ -1,0 +1,26 @@
+id = "letmeafk"
+name = "LetMeAFK"
+version = "1.0.0"
+description = "Keeps you from going AFK: timed jumps, sneak, swing, punch, use, a WASD walk cycle, camera moves, spin, auto-eat, hotbar shuffling, offhand swaps, inventory opens, chat messages, auto-commands, auto-disconnect, disconnect on damage and auto-logout. Many servers forbid AFK automation — check the rules first."
+authors = ["SkyeSlav"]
+license = "MIT"
+license_url = "https://github.com/SkyeSlav/letmeafk/blob/main/LICENSE"
+homepage = "https://github.com/SkyeSlav/letmeafk"
+issues = "https://github.com/SkyeSlav/letmeafk/issues"
+# A native mod: Rust in src/, compiled by the launcher against the game build [native] pins, beside data/ and assets/.
+api = "0.2"
+side = "client"
+# registries: "May add blocks, items, mob effects and entity types to your worlds".
+capabilities = ["registries"]
+
+[native]
+game = "26.3"
+# The oldest build with a signed SDK release (2026-11-18 04:05 UTC; the
+# SDK program's first releases). No SDK release exists for Starling
+# 0.9.0's base c98a51a664 (2026-11-08) or anything before it, so this
+# is the closest SDK to Starling's API. Every API this mod uses was
+# verified present in Starling 0.9.0's own vocab (starling v0.9.0,
+# crates/horizon-mod-vocab), so the launcher's compile against 0.9.0
+# only sees APIs 0.9.0 has. Also Auto Login 1.1.1's proven pin.
+horizon = "0b14f8acfd97fa2c750e42795249dcc981178ca4"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"
